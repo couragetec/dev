@@ -1,7 +1,7 @@
 import { Theme, ThemeUIStyleObject } from "theme-ui";
 
 const baseColors = {
-  blue: "#1542cd",
+  blue: "#012b50",
   purple: "#745ddf",
   cyan: "#2eb6ea",
   green: "#28c081",
@@ -22,11 +22,21 @@ const colors = {
   info: baseColors.blue,
   invalid: "pink",
 
-  text: "#293147",
-  background: "white",
-  muted: "#eaebed"
+  text: "#ffffff",
+  background: "#001b27",
+  muted: "#eaebed",
+  
 };
 
+const dashGradient: ThemeUIStyleObject = {
+  background: `linear-gradient(180deg, ${colors.info}, ${colors.success})`
+};
+const headerGradient: ThemeUIStyleObject = {
+  background: `linear-gradient(270deg, ${colors.info}, ${colors.success})`
+};
+const cardGradient: ThemeUIStyleObject = {
+  background: `linear-gradient(200deg, ${colors.success}, ${colors.info})`
+};
 const buttonBase: ThemeUIStyleObject = {
   display: "flex",
   alignItems: "center",
@@ -86,7 +96,8 @@ const cardGapY = [3, 3, 4];
 const card: ThemeUIStyleObject = {
   position: "relative",
   mt: cardGapY,
-  border: 1,
+  border: 0,
+  borderRadius: 10,
   boxShadow: [1, null, 2]
 };
 
@@ -95,7 +106,7 @@ const infoCard: ThemeUIStyleObject = {
 
   padding: 3,
 
-  borderColor: "rgba(122,199,240,0.4)",
+  borderColor: "rgba(122,199,240,0.1)",
   background: "linear-gradient(200deg, #d4d9fc, #cae9f9)",
 
   h2: {
@@ -140,9 +151,6 @@ const modalOverlay: ThemeUIStyleObject = {
   height: "100vh"
 };
 
-const headerGradient: ThemeUIStyleObject = {
-  background: `linear-gradient(90deg, ${colors.background}, ${colors.muted})`
-};
 
 const theme: Theme = {
   breakpoints: ["48em", "52em", "64em"],
@@ -195,13 +203,13 @@ const theme: Theme = {
   buttons: {
     primary: {
       ...button,
-
-      bg: "primary",
+      ...cardGradient,
+      //bg: "primary",
       borderColor: "primary",
 
       ":enabled:hover": {
         bg: "secondary",
-        borderColor: "secondary"
+        borderColor: "rgba(0,0,0,0.4)"
       }
     },
 
@@ -251,11 +259,11 @@ const theme: Theme = {
   cards: {
     primary: {
       ...card,
+      ...dashGradient,
 
       padding: 0,
-
+      border: 0,
       borderColor: "muted",
-      bg: "background",
 
       "> h2": {
         display: "flex",
@@ -268,7 +276,7 @@ const theme: Theme = {
         py: 2,
         pr: 2,
 
-        bg: "muted",
+        bg: "info",
 
         fontSize: cardHeadingFontSize
       }
@@ -276,7 +284,7 @@ const theme: Theme = {
 
     info: {
       ...infoCard,
-
+      ...headerGradient,
       display: ["none", "block"]
     },
 
@@ -317,12 +325,13 @@ const theme: Theme = {
       ...formCell,
 
       textAlign: "center",
-      bg: "muted"
+      bg: "background",
+      border: 0
     },
 
     input: {
       ...formCell,
-
+      border: 0,
       flex: 1
     },
 
@@ -334,7 +343,7 @@ const theme: Theme = {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "stretch",
-
+      color:"#fdffe2",
       position: ["fixed", "relative"],
       width: "100vw",
       top: 0,
@@ -445,7 +454,7 @@ const theme: Theme = {
       borderRadius: 3,
       p: 1,
       px: 2,
-      backgroundColor: "muted",
+      backgroundColor: "primary",
       color: "slate",
       fontSize: 1,
       fontWeight: "body"
@@ -482,7 +491,8 @@ const theme: Theme = {
       textTransform: "uppercase",
       letterSpacing: "2px",
       width: ["100%", "auto"],
-      mt: [3, "auto"]
+      mt: [3, "auto"],
+      
     }
   }
 };
