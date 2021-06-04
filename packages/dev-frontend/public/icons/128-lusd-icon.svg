@@ -14,6 +14,9 @@
    version="1.1"
    id="svg14"
    sodipodi:docname="128-lusd-icon.svg"
+   inkscape:export-filename="/home/Dev/dev/packages/dev-frontend/public/icons/128-lusd-icon.png"
+   inkscape:export-xdpi="234.72"
+   inkscape:export-ydpi="234.72"
    inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
   <metadata
      id="metadata18">
@@ -36,14 +39,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1908"
-     inkscape:window-height="1032"
+     inkscape:window-height="504"
      id="namedview16"
      showgrid="false"
      inkscape:zoom="1.0150849"
      inkscape:cx="224.87654"
      inkscape:cy="59.306011"
      inkscape:window-x="6"
-     inkscape:window-y="24"
+     inkscape:window-y="552"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg14" />
   <defs
@@ -396,7 +399,9 @@
   </defs>
   <g
      id="g1359"
-     clip-path="url(#clipPath1361)">
+     clip-path="url(#clipPath1361)"
+     inkscape:export-xdpi="234.72"
+     inkscape:export-ydpi="234.72">
     <g
        id="_128-lusd-icon"
        data-name="128-lusd-icon"
